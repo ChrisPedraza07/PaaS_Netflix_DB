@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --darkerLavender: #ACA0C9;
+    --idkPurple: #E0CCE8;
+    --blackSmoke: #3F3F3F;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    margin-top: 0px;
+}
+table{
+    border-radius: 16px;
+}
+td {
+    padding: 8px;
+}
+hr {
+    border: 1px solid white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    
+    text-align: left;
+    text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8); /* Strong red glow */
+    color: rgb(229, 9, 20);
+    background-color: black;
+    padding-left: 10px;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+button{
+    background-color: whitesmoke;
+    color:  rgb(229, 9, 20);
+    border: none;
+    cursor:zoom-in;
+    box-shadow: black 0px 3px 5px;
+}
+    button:hover {
+        transform: translateY(-2px);
+    }
+input, button {
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin: 5px 0;
+    text-align: center;
+}
+label, #titleImage, .col-md-4 b {
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+   
+}
+select{
+    border-radius: 6px;
+    color:  rgb(229, 9, 20);
+}
+
+#introScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeOut 3s ease-out forwards;
+}
+
+#introScreen h1 {
+    font-size: 10rem;
+    color: red;
+    text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
+    opacity: 1;
+    animation: textFade 1.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 3; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes textFade {
+    0% { opacity: 0; transform: scale(1.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+
+.navbar {
+    background-color: black !important;
+  
+}
+
+    
+
+.navbar-nav .nav-link {
+    color: white !important;
+    padding: 5px 5px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    
+}
+.navbar-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%; /* ensures the spacing fills the nav bar */
+    text-align: center;
+
+}
+.navbar-nav .nav-link:hover {
+    background-color: #c62828;
+  
+    border-radius: 8px;
+    transition: background-color 0.4s ease-in-out;
+    
+    
+}
+.navbar-brand {
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* This targets the icon inside the button */
+#hamburgerButton .navbar-toggler-icon {
+ 
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+#hamburgerButton:focus,
+#hamburgerButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.row {
+    padding-top: 10px;
+        padding-bottom: 10px;  
+    
+    }
+.container {
+    background-color: var(--blackSmoke);
+    padding-top: 10px;
+    padding-bottom: 10px;  
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.col-md-4 {
+    text-align: left;
+    margin-left: auto;
+    padding-bottom: 10px;
+    justify-content: start;
+}
+.col-md-8 {
+    text-align: right;
+    margin-right: auto;
+    padding-bottom: 10px;
+    justify-content: end;
+}
+.col-md-6{
+    text-align: center;
+    margin-right: auto;
+    padding-bottom: 10px;
+    justify-content: end;
+    display: flexbox;
+}
+
+input[type="radio"] {
+    
+    border: 2px solid #ccc;
+  height: 1.3rem;
+    width: .3rem;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="radio"]:checked {
+    border-color: red;
+    background-color: red;
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+   background: white;
+}
+
+
+#filterButtonSection, #submitButtonSection {
+    text-align: center;
+    margin-right: auto;
+    padding-bottom: 10px;
+    justify-content:center;
+    display: flex;
+    gap: 20px;
+}
+
+#submitButton{
+  background-color: rgb(229, 9, 20);
+    color: white;
+}
+
+#filterButtonSection button{
+padding-left: 10px; 
+padding-right: 10px; 
+}
+
+#sortByInput{
+    background-color: rgb(229, 9, 20);
+    color: white;
+
+
+}
+#sortBy{
+    background-color: rgb(229, 9, 20);
+    color: white;
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin: 5px 0;
+    text-align: center;
+}
+#clearButton{
+    background-color: black;
+    color: white;
+}
+#animeRankSlider{
+    accent-color: rgb(229, 9, 20);
+    
+}
+#titleImage, #submitButtonDiv, #banner {
+    text-align: center;
+}
+
+.error-text {
+    color: red;
+    font-weight: bold;
+}
+
+.success-text {
+    color: rgb(46, 213, 46);
+    font-weight: bold;
+}
+
+#showSummary {
+    box-sizing: content-box;
+}
+#animeTable {
+    display: block;
+    overflow-x: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+
+}
+#editAnimeForm{
+    background-color: var(--blackSmoke);
+}
+#editAnimeForm h4,h5{
+color: white;
+}
+#saveEditButton{
+    color: white;
+    background-color: rgb(229, 9, 20);
+    
+}
+#cancelButton{
+    background-color:whitesmoke;
+}
+.form-control{
+    width: fit-content;
+}
+@media (max-width: 1400px) {
+    .responsive-table thead {
+      display: none;
+    }
+  
+    .responsive-table tbody, .responsive-table tr, .responsive-table td {
+      display: block;
+      width: 100%;
+    }
+  
+    .responsive-table tr {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+  
+    .responsive-table td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+  
+    .responsive-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 10px; /* Adjust this for spacing */
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+  
+  /* Responsive table for smaller screens (max-width: 768px) */
+  @media (max-width: 768px) {
+    .responsive-table thead {
+      display: none;
+    }
+  
+    .responsive-table tbody, .responsive-table tr, .responsive-table td {
+      display: block;
+      width: 100%;
+    }
+  
+    .responsive-table tr {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+  
+    .responsive-table td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+  
+    .responsive-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 10px; /* Adjust for spacing */
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+  
+    
+  
+  

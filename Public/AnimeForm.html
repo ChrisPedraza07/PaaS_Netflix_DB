@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+
+    <title>OG Netflix Anime Entry Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="formStyleSheet.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" id="hamburgerButton" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" title ="brand" href="#"></a>
+
+                </div>
+
+                <ul class="nav navbar-nav">
+
+
+                    <li class="nav-item"><a class="nav-link" href="animeForm.html">Enter Anime Form</a></li>
+                    <li class="nav-item"><a class="nav-link" href="animeFormFilter.html">Anime Entry Data</a></li>
+
+
+            </div>
+
+
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>Netflix Original Anime Form</h1>
+        <div id="introScreen">
+            <h1>N</h1>
+        </div>
+       <div class = "col-md-12">
+        <div id="banner"></div>
+         </div>
+
+        <!--<form id="animeForm">!-->
+        <div class="form-inline" id="animeEntryForm">
+            <div class="form-group">
+                <label class="sr-only" for="anime_title">Anime Title</label>
+   
+
+                <input type="text" class ="form-control" id="anime_title" title="Enter Anime Title" placeholder="Enter Anime Title">
+            </div>
+            <hr>
+            <div class="form-inline" id="animeEntryForm">
+                <!-- Release Date -->
+                <div class="form-group mb-2">
+                    <label class="sr-only" for="date">Release Date</label>
+                    <input type="date" class="form-control" id="date" title="Enter release date" placeholder="YYYY-MM-DD">
+                </div>
+                <hr>
+                <!-- Rating -->
+                <div class="form-group mb-2">
+                    <label class="sr-only" for="rating">Choose a rating:</label>
+                    <select class="form-control" name="rating" id="rating" title="Select Rating">
+                        <option value="null"></option>
+                        <option value="TV-MA">TV-MA</option>
+                        <option value="TV-14">TV-14</option>
+                        <option value="TV-PG">TV-PG</option>
+                        <option value="TV-G">TV-G</option>
+                        <option value="TV-Y7">TV-Y7</option>
+                    </select>
+                </div>
+                <hr>
+                <!-- Title Image -->
+                <div class="form-group mb-2">
+                    <label class="sr-only" for="title_image">Upload Title Image</label>
+                    <input type="file" class="form-control-file" id="title_image" title="Upload Title Image">
+                </div>
+                <hr>
+                <!-- Animation Style -->
+                <div class="form-group mb-2">
+                    <label class="mr-2">Animation Style</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="2D" name="style" value="2D" title="2D Animation Style">
+                        <label class="form-check-label" for="2D">2D</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="3D" name="style" value="3D" title="3D Animation Style">
+                        <label class="form-check-label" for="3D">3D</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="hybrid" name="style" value="hybrid" title="Hybrid Animation Style">
+                        <label class="form-check-label" for="hybrid">Hybrid</label>
+                    </div>
+                </div>
+                <hr>
+                <!-- Show Summary -->
+                <div class="form-group mb-2 w-100">
+                    <label class="sr-only" for="show_summary">Show Summary</label>
+                    <textarea class="form-control w-100" id="show_summary" title="Enter show summary" placeholder="Enter show summary"></textarea>
+                </div>
+                <hr>
+                <!-- Number of Seasons -->
+                <div class="form-group mb-2">
+                    <label class="sr-only" for="num_of_seasons">Number of Seasons</label>
+                    <input type="number" class="form-control" id="num_of_seasons" title="Enter number of seasons" placeholder="Enter number of seasons">
+                    <span id="num_of_seasons-error" class="error-message"></span>
+                </div>
+                <hr>
+                <!-- Stars -->
+                <div class="form-group mb-2 w-100">
+                    <label class="sr-only" for="stars">Stars</label>
+                    <input type="range" class="form-control-range" min="0" max="5" value="0" step="1" id="stars" title="Select a star rating">
+                    <label id="starLabel" for="stars">Stars: 0</label>
+                </div>
+                <hr>
+                <!--Publisher ID--> 
+                <div class="form-group mb-2 w-100">
+                    <label class="sr-only" for="publisher_id">Publisher</label>
+                    <select class="form-control" name="publisher_id" id="publisher_id" title="Select Publisher ID">
+                    </select>
+                    
+                <!-- Submit Button -->
+                <div class="form-group mb-2 w-100">
+                    <button class="btn " id="submitButton">Submit</button>
+                </div>
+            </div>
+            
+</div>
+</div>
+
+      
+
+</body>
+
+</html>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.getElementById("stars");
+  const output = document.getElementById("starLabel");
+  output.textContent = `Stars: ${slider.value}`;
+  slider.oninput = function () { output.textContent = `Stars: ${this.value}`; };
+
+  // Submit
+  document.getElementById("submitButton").addEventListener("click", async (event) => {
+    event.preventDefault();
+
+    const animeForm = new FormData();
+    animeForm.append("anime_title", document.getElementById("anime_title").value.trim());
+    animeForm.append("date", document.getElementById("date").value.trim());
+    animeForm.append("rating", document.getElementById("rating").value);
+    const fileInput = document.getElementById("title_image").files[0];
+    animeForm.append("title_image", fileInput);
+    const selectedStyle = document.querySelector('input[name="style"]:checked');
+    animeForm.append("style", selectedStyle ? selectedStyle.value : "");
+    animeForm.append("stars", document.getElementById("stars").value);
+    animeForm.append("show_summary", document.getElementById("show_summary").value.trim());
+    animeForm.append("num_of_seasons", document.getElementById("num_of_seasons").value.trim());
+    animeForm.append("publisher_id", document.getElementById("publisher_id").value);
+
+    try {
+      // 👇 RELATIVE path (no localhost)
+      const response = await fetch("/animeForm", { method: "POST", body: animeForm });
+
+      if (!response.ok) {
+        // backend sends { message, errors: [...] }
+        const errorData = await response.json().catch(() => ({}));
+        displayErrors(errorData.errors || [errorData.message || `HTTP ${response.status}`]);
+        return;
+      }
+
+      displayErrors(null);
+      displaySuccessMessage("Form Submitted Successfully!");
+
+      // If you want to show the new row immediately:
+      const tableBody = document.querySelector("#animeTable tbody");
+      if (tableBody) {
+        const newRow = document.createElement("tr");
+        const imgSrc = fileInput ? URL.createObjectURL(fileInput) : "";
+        newRow.innerHTML = `
+          <td>${animeForm.get("anime_title")}</td>
+          <td>${animeForm.get("date")}</td>
+          <td>${animeForm.get("rating")}</td>
+          <td>${imgSrc ? `<img src="${imgSrc}" alt="Anime Image" style="max-width: 100px;">` : "No Image"}</td>
+          <td>${animeForm.get("style")}</td>
+          <td>${animeForm.get("show_summary")}</td>
+          <td>${animeForm.get("num_of_seasons")}</td>
+          <td>${animeForm.get("stars")}</td>
+        `;
+        tableBody.appendChild(newRow);
+      }
+
+      clearForm();
+    } catch (error) {
+      console.error("Error:", error);
+      displayErrors(["Failed to submit the form. Please try again."]);
+    }
+  });
+
+  function displaySuccessMessage(message) {
+    const successContainer = document.getElementById("banner");
+    successContainer.innerHTML = "";
+    successContainer.style.backgroundColor = "lightgreen";
+    successContainer.style.transition = "opacity 0.5s ease-in-out";
+    successContainer.style.opacity = "1";
+    const p = document.createElement("p");
+    p.classList.add("success-text");
+    p.textContent = message;
+    successContainer.appendChild(p);
+    setTimeout(() => {
+      successContainer.style.opacity = "0";
+      setTimeout(() => {
+        successContainer.innerHTML = "";
+        successContainer.style.backgroundColor = "";
+        successContainer.style.opacity = "1";
+      }, 500);
+    }, 2000);
+  }
+
+  function displayErrors(errors) {
+    const errorContainer = document.getElementById("banner");
+    errorContainer.style.backgroundColor = errors && errors.length ? "pink" : "";
+    errorContainer.innerHTML = "";
+    if (errors && errors.length > 0) {
+      errorContainer.innerHTML = "<b>Please fix the following errors:</b><br>";
+      errors.forEach(err => {
+        const msg = typeof err === "string" ? err : (err.msg || JSON.stringify(err));
+        const p = document.createElement("p");
+        p.classList.add("error-text");
+        p.textContent = `- ${msg}`;
+        errorContainer.appendChild(p);
+      });
+    }
+  }
+
+  function clearForm() {
+    document.getElementById("anime_title").value = "";
+    document.getElementById("date").value = "";
+    document.getElementById("rating").value = "null";
+    document.getElementById("title_image").value = "";
+    document.querySelectorAll('input[name="style"]').forEach(r => (r.checked = false));
+    document.getElementById("show_summary").value = "";
+    document.getElementById("num_of_seasons").value = "";
+    document.getElementById("stars").value = "0";
+    output.textContent = "Stars: 0";
+  }
+});
+
+// ---------------- Publisher dropdown ----------------
+async function fetchPublisherIDs() {
+  const publisherDropDown = document.getElementById('publisher_id');
+  try {
+    // 👇 RELATIVE path (no localhost)
+    const response = await fetch("/publisher");
+    const data = await response.json();
+
+    // server returns an array; if you changed it to {data: [...]}, adjust here
+    const list = Array.isArray(data) ? data : (data.data || []);
+    publisherDropDown.innerHTML = '<option value="">Select a publisher...</option>';
+    list.forEach(pub => {
+      const opt = document.createElement("option");
+      opt.value = pub.publisher_id;
+      opt.text = pub.publisher_name;
+      publisherDropDown.add(opt);
+    });
+  } catch (error) {
+    console.error('Error fetching publishers:', error);
+  }
+}
+document.addEventListener("DOMContentLoaded", fetchPublisherIDs);
+</script>
