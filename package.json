@@ -3,6 +3,24 @@
     "express": "^4.21.2",
     "express-validator": "^7.2.1",
     "multer": "^1.4.5-lts.1",
-    "mysql2": "^3.12.0"
-  }
+    "mysql2": "^3.15.3",
+    "path": "^0.12.7"
+  },
+  "name": "paas_netflix_db",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisPedraza07/PaaS_Netflix_DB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisPedraza07/PaaS_Netflix_DB/issues"
+  },
+  "homepage": "https://github.com/ChrisPedraza07/PaaS_Netflix_DB#readme",
+  "description": ""
 }
